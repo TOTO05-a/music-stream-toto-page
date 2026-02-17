@@ -26,13 +26,21 @@
   justify-content: center;
   font-weight: bold;
 }
-.header {
-  flex-wrap: wrap;
+.header-center input {
+  padding: 0.6rem 1rem;
+  border-radius: 205px;
+  border: #ccc;
+  background-color: #ffffff;
+  color: white;
+  width: 250px;
+  transition: var(--transition);
 }
 
-.header-center {
-  flex: 1;
+.header-center input:focus {
+  outline: none;
+  background-color: #ffffff;
 }
+
 .albums {
   margin-top: 3rem;
 }
@@ -46,11 +54,17 @@
   display: grid;
   gap: 1.5rem;
 }
+.album-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .album-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
 .album-card {
   background-color: var(--color-surface);
   padding: 1rem;
@@ -106,6 +120,14 @@
   .album-detail {
     grid-template-columns: 300px 1fr;
     align-items: start;
+
+  }
+  .header{
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+  }
+   .header-center{
+    padding: 0 1rem;
   }
 }
 /* estilos para checkout */
@@ -136,4 +158,114 @@
 .success {
   text-align: center;
   margin-top: 4rem;
+}
+
+/* estilo para dar fondo cards coherentes y contraste fuerte */
+.hero {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.hero-description {
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+/* flexbox para ordenar bien el header y avatar */
+.header {
+  background-color: var(--color-surface);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+}
+
+
+.header-center input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--color-surface);
+  color: white;
+}
+
+.avatar {
+  background-color: var(--color-primary);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--color-muted);
+  display: block;
+  padding: 0.5rem 0;
+  
+}
+
+.sidebar a.active {
+  color: var(--color-primary);
+  font-weight: bold;
+  
+}
+.sidebar {
+  background-color: #000;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.album-card {
+  background-color: var(--color-surface);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.album-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.content {
+  padding: 2rem;
+}
+.sidebar a {
+  text-decoration: none;
+  color: var(--color-muted);
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.sidebar a:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.sidebar a.active {
+  background-color: var(--color-primary);
+  color: black;
+  font-weight: bold;
+}
+.app-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
 }

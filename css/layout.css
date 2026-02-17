@@ -1,0 +1,35 @@
+.header {
+  background-color: var(--color-surface);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-center input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.header {
+  flex-wrap: wrap;
+}
+
+.header-center {
+  flex: 1;
+}

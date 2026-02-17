@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">MusicStream</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Discover</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="main-area">
+
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo-text">MusicStream</h1>
+            </div>
+            <div class="header-center">
+                <input type="text" placeholder="Artists, albums, tracks">
+            </div>
+            <div class="header-right">
+                <div class="avatar">AC</div>
+            </div>
+        </header>
+
+        <main class="content">
+
+            <section class="checkout">
+
+                <h2>Order Summary</h2>
+
+                <div class="order-item">
+                    <p><strong>Album:</strong> Midnight Echo</p>
+                    <p><strong>Artist:</strong> Nova Echo</p>
+                    <p><strong>Price:</strong> $12.99</p>
+                </div>
+
+                <h3>INFORMACION DE PAGO</h3>
+
+                <form class="checkout-form" action="success.html">
+
+                    <label>
+                        NOMBRE COMPLETO
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        NUMERO DE TARJETA
+                        <input type="text" required>
+                    </label>
+
+                    <label>
+                        VENCIMIENTO DE DATOS
+                        <input type="month" required>
+                    </label>
+
+                    <label>
+                        CVV
+                        <input type="text" required>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">
+                        Complete Purchase
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+</body>
+</html>

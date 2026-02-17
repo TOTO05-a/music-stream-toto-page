@@ -131,3 +131,9 @@
   border-radius: var(--radius-sm);
   border: 1px solid #ccc;
 }
+
+/* para el succes boton */
+.success {
+  text-align: center;
+  margin-top: 4rem;
+}

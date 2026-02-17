@@ -108,3 +108,26 @@
     align-items: start;
   }
 }
+/* estilos para checkout */
+.checkout {
+  max-width: 600px;
+}
+
+.order-item {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+}
+
+.checkout-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ccc;
+}

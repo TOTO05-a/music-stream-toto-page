@@ -76,3 +76,35 @@
 .album-card:hover {
   transform: translateY(-5px);
 }
+.album-card{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* album detail */
+.album-detail {
+  display: grid;
+  gap: 2rem;
+}
+
+.album-cover img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.album-info .description {
+  color: var(--color-muted);
+  margin: 1rem 0;
+}
+
+.tracklist {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .album-detail {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}

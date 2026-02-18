@@ -24,7 +24,7 @@
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Descubrir</a></li>
-                <li><a href="#">Libreria</a></li>
+                <li><a href="views/libreria.html">Libreria</a></li>
                 <li><a href="views/album_detail.html">Tienda</a></li>
             </ul>
         </nav>
@@ -49,81 +49,122 @@
         </header>
 
         <!-- CONTENT -->
-<main class="content">
+        <main class="content">
 
             <!-- HERO SECTION -->
             <section class="hero">
+
+                <section class="featured-artist">
+                    <div class="featured-content">
+                        <div>
+                            <h2>Featured Artist</h2>
+                            <h3>Nova Echo</h3>
+                            <p>
+                                Nova Echo is redefining electronic atmospheres with deep bass
+                                and cinematic soundscapes.
+                            </p>
+                            <a href="views/album_detail.html" class="btn btn-primary">
+                                Explore Artist
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
                 <div class="hero-text">
                     <p class="hero-tag">Editor's Pick</p>
                     <h2 class="hero-title">Solar Flare</h2>
                     <p class="hero-description">
                         Experience the latest atmospheric release from Nova Echo.
                     </p>
-                    <a href="#" class="btn btn-primary">Buy Now</a>
+                    <a href="views/album_detail.html" class="btn btn-primary">
+                        Buy Now
+                    </a>
+                </div>
+
+            </section>
+
+            <!-- ALBUMS SECTION -->
+            <section class="albums">
+
+                <h2 class="section-title">New Releases</h2>
+
+                <div class="album-grid">
+
+                    <article class="album-card">
+                        <a href="views/album_detail.html" class="album-link">
+                            <img src="imagenes/AlbumAlvaroSayonara.png" alt="Sayonara Album Cover">
+                            <h3>Sayonara</h3>
+                            <p class="artist">Alvaro Diaz</p>
+                            <p class="price">$12.99</p>
+                        </a>
+                    </article>
+
+                    <article class="album-card">
+                        <a href="views/album_detail.html" class="album-link">
+                            <img src="imagenes/DiazAntes.png" alt="DiazAntes">
+                            <h3>DiazAntes</h3>
+                            <p class="artist">Alvaro Diaz</p>
+                            <p class="price">$10.99</p>
+                        </a>
+                    </article>
+
+                    <article class="album-card">
+                        <a href="views/album_detail.html" class="album-link">
+                            <img src="imagenes/Felicilandia.png" alt="Felicilandia">
+                            <h3>Felicilandia</h3>
+                            <p class="artist">Alvaro Diaz</p>
+                            <p class="price">$9.99</p>
+                        </a>
+                    </article>
+
                 </div>
             </section>
-<section class="albums">
 
-    <h2 class="section-title">New Releases</h2>
+            <!-- CHARTS SECTION -->
+            <section class="charts">
+                <h2 class="section-title">Top Charts</h2>
 
-    <div class="album-grid">
-   <article class="album-card">
-    <a href="views/album_detail.html" class="album-link">
-        <img src="imagenes/AlbumAlvaroSayonara.png" alt="Sayonara Album Cover">
-        <h3>Sayonara</h3>
-        <p class="artist">Alvaro Diaz</p>
-        <p class="price">$12.99</p>
-    </a>
-</article>
-<article class="album-card">
-        <a href="views/album_detail.html" class="album-link">
-            <img src="imagenes/DiazAntes.png" alt="Album cover">
-            <h3>DiazAntes</h3>
-            <p class="artist">Alvaro Diaz</p>
-            <p class="price">$10.99</p>
-        </a>
-        </article>
-        <article class="album-card">
-        <a href="views/album_detail.html" class="album-link">
-            <img src="imagenes/Felicilandia.png" alt="Album cover">
-            <h3>Felicilandia</h3>
-            <p class="artist">Alvaro Diaz</p>
-            <p class="price">$9.99</p>
-        </a>
-</article>
-        <article class="album-card">
-            <a href="views/album_detail.html" class="album-link">
-                <img src="assets/images/album4.jpg" alt="Album cover">
-                <h3>Electric Dreams</h3>
-                <p class="artist">Night Pulse</p>
-                <p class="price">$11.99</p>
-            </a>
-            </article>
-           <article class="album-card">       
-            <a href="views/album_detail.html" class="album-link">
-                <img src="assets/images/album4.jpg" alt="Album cover">
-                <h3>Electric Dreams</h3>
-                <p class="artist">Night Pulse</p>
-                <p class="price">$11.99</p>
-            </a>
-            </article> 
-          <article class="album-card">      
-            <a href="views/album_detail.html" class="album-link">
-                <img src="assets/images/album4.jpg" alt="Album cover">
-                <h3>Electric Dreams</h3>
-                <p class="artist">Night Pulse</p>
-                <p class="price">$11.99</p>
-            </a>
-            </article>   
-           </div>
-</section>
+                <div class="chart-list">
+                    <div class="chart-item">
+                        <span>01</span>
+                        <p>Midnight Echo - Nova Echo</p>
+                    </div>
+                    <div class="chart-item">
+                        <span>02</span>
+                        <p>Solar Flare - Nova Echo</p>
+                    </div>
+                    <div class="chart-item">
+                        <span>03</span>
+                        <p>Electric Dreams - Night Pulse</p>
+                    </div>
+                </div>
+            </section>
 
         </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MusicStream</h3>
+                    <p>Premium digital music platform for modern listeners.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+
+                <p class="footer-copy">
+                    © 2026 Acme Records. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
     </div>
 </div>
-
-
-
 
 </body>
 </html>

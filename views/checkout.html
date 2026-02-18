@@ -41,13 +41,82 @@
                 <p>$12.99</p>
             </div>
 
-            <form class="checkout-form" action="success.html">
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <input type="text" placeholder="Número de tarjeta" required>
+        
+            <div class="checkout-grid">
+
+            
+                <section class="forms-column">
+                    <div class="checkout-card">
+                        <h3>Pay with Credit Card
+                       
+                        </h3>
+                        
+                        <form class="payment-form">
+                            <div class="input-group">
+                                <label>Nombre</label>
+                                <input type="text" placeholder="Nombre completo" required>
+                                <label>Email</label>
+                                <input type="email" placeholder="Correo electrónico" required>
+                                <label>Card Number</label>
+                                <input type="text" placeholder="0000 0000 0000 0000">
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>Expiration (MM/YY)</label>
+                                    <input type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="input-group">
+                                    <label>CVC</label>
+                                    <input type="password" placeholder="123">
+                                </div>
+                                 <div class="input-group">
+                                <label>Name on Card</label>
+                                <input type="text" placeholder="John Doe">
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+    
+                    <div class="checkout-card">
+                        <h3>Billing Address</h3>
+
+                        <form class="address-form">
+                            
+                            <div class="input-group">
+                                <label>Country/Region</label>
+                                <input type="text" id="region" name="region" list="region-list" placeholder="Select your country">
+                                <datalist id="region-list">
+                                <option value="Guatemala">
+                                <option value="Mexico">
+                                <option value="Estados Unidos">
+                                 </datalist>
+                            </div>
+                            <div class="input-group">
+                                <label>Street Address</label>
+                                <input type="text" placeholder="123 Music Lane">
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label>City</label>
+                                    <input type="text" placeholder="Guatemala City">
+                                </div>
+                                <div class="input-group">
+                                    <label>Postal Code</label>
+                                    <input type="text" placeholder="01001">
+                                </div>
+                                  <div class="input-group">
+                                <label>Postal Code</label>
+                                <input type="text" placeholder="37203">
+
+                
                 <button class="btn btn-primary">Confirmar Compra</button>
             </form>
-
+                            </div>
+                        </div>
+                                  
+                        </form>
+                    </div>
+                </section>
         </main>
 
     </div>

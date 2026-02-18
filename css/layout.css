@@ -1,137 +1,87 @@
+/* ================= HEADER ================= */
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+}
+
+.header-center {
+  padding: 0 1rem;
+}
 
 .header-center input {
   width: 100%;
   max-width: 400px;
+  background-color: var(--color-surface-2);
+  border: 1px solid transparent;
+  color: var(--color-text);
   padding: 0.6rem 1rem;
   border-radius: 50px;
-  border: none;
-  outline: none;
+  transition: var(--transition);
 }
-
 
 .header-center input:focus {
+  border-color: var(--color-accent);
   outline: none;
-  background-color: #ffffff;
 }
 
-.albums {
-  margin-top: 3rem;
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  border-right: 1px solid var(--color-surface-2);
 }
 
-.section-title {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+.sidebar h2 {
+  margin-bottom: 2rem;
 }
 
-.album-grid {
-  display: grid;
-  gap: 1.5rem;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-
-@media (min-width: 768px) {
-  .album-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-.album-card img {
-  width: 100%;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-}
-
-.artist {
+.sidebar a {
+  text-decoration: none;
   color: var(--color-muted);
-  font-size: 0.9rem;
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
 }
 
-.price {
-  margin-top: 0.5rem;
+.sidebar a:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.sidebar a.active {
+  background-color: var(--color-primary);
+  color: black;
   font-weight: bold;
 }
 
-.album-card {
-  background: linear-gradient(145deg, #1e293b, #172033);
-  padding: 1.2rem;
-  border-radius: var(--radius-md);
-  transition: var(--transition);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--color-surface-2);
-}
+/* ================= LAYOUT ================= */
 
-.album-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-strong);
-  border-color: var(--color-accent);
-}
-
-
-/* album detail */
-.album-detail {
+.app-layout {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: 220px 1fr;
 }
 
-.album-cover img {
-  width: 100%;
-  border-radius: var(--radius-md);
+.content {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.album-info .description {
-  color: var(--color-muted);
-  margin: 1rem 0;
-}
+/* ================= HERO ================= */
 
-.tracklist {
-  margin: 1rem 0;
-  padding-left: 1rem;
-}
-
-@media (min-width: 768px) {
-  .album-detail {
-    grid-template-columns: 300px 1fr;
-    align-items: start;
-
-  }
-  .header{
-    grid-template-columns: auto 1fr auto auto;
-    align-items: center;
-  }
-   .header-center{
-    padding: 0 1rem;
-  }
-}
-/* estilos para checkout */
-.checkout {
-  max-width: 600px;
-}
-
-.order-item {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: var(--color-surface);
-  border-radius: var(--radius-md);
-}
-
-.checkout-form {
-  display: grid;
-  gap: 1rem;
-}
-
-.checkout-form input {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid #ccc;
-}
-
-/* para el succes boton */
-.success {
-  text-align: center;
-  margin-top: 4rem;
-}
-
-/* estilo para dar fondo cards coherentes y contraste fuerte */
 .hero {
   background: linear-gradient(135deg, #1e293b, #0f172a);
   padding: 2rem;
@@ -152,124 +102,109 @@
   max-width: 500px;
 }
 
-/* flexbox para ordenar bien el header y avatar */
-.header {
-  background-color: var(--color-surface);
-  padding: 1rem 2rem;
-  border-radius: var(--radius-md);
+/* ================= ALBUM GRID ================= */
+
+.albums {
+  margin-top: 3rem;
 }
 
-.header-center input {
-  background-color: var(--color-surface-2);
-  border: 1px solid transparent;
-  color: var(--color-text);
-  padding: 0.6rem 1rem;
-  border-radius: 50px;
-  transition: var(--transition);
-}
-
-.header-center input:focus {
-  border-color: var(--color-accent);
-  outline: none;
-}
-
-.avatar {
-  background-color: var(--color-primary);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-
-.sidebar {
-  background: linear-gradient(180deg, #1e293b, #0f172a);
-  padding: 2rem 1rem;
-  min-height: 100vh;
-  border-right: 1px solid var(--color-surface-2);
-}
-
-
-.sidebar h2 {
+.section-title {
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.album-grid {
+  display: grid;
+  gap: 1.5rem;
 }
+
+@media (min-width: 768px) {
+  .album-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .album-card {
-  background-color: var(--color-surface);
-  padding: 1rem;
+  background: linear-gradient(145deg, #1e293b, #172033);
+  padding: 1.2rem;
   border-radius: var(--radius-md);
   transition: var(--transition);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-surface-2);
 }
+
 .album-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--color-accent);
 }
-.content {
-  padding: 2rem;
-}
-.sidebar a {
-  text-decoration: none;
-  color: var(--color-muted);
-  display: block;
-  padding: 0.6rem 1rem;
+
+.album-card img {
+  width: 100%;
   border-radius: var(--radius-sm);
-  transition: var(--transition);
+  margin-bottom: 1rem;
 }
 
-.sidebar a:hover {
-  background-color: var(--color-surface);
-  color: var(--color-text);
-}
-
-.sidebar a.active {
-  background-color: var(--color-primary);
-  color: black;
-  font-weight: bold;
-}
-.app-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-}
 .album-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
-.footer {
-  margin-top: 4rem;
-  padding: 3rem 2rem;
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-surface-2);
-}
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-links {
-  margin: 1.5rem 0;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a {
+.artist {
   color: var(--color-muted);
-  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-.footer-links a:hover {
-  color: var(--color-accent);
+.price {
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
+
+/* ================= ALBUM DETAIL ================= */
+
+.album-detail {
+  background-color: var(--color-surface);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  max-width: 1000px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .album-detail {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+  }
+}
+
+.album-cover img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.album-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.album-info .description {
+  color: var(--color-muted);
+  margin: 1rem 0;
+}
+
+.tracklist {
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+/* ================= CHARTS ================= */
+
 .charts {
   margin-top: 4rem;
 }
@@ -298,6 +233,9 @@
 .chart-item:hover {
   transform: translateX(5px);
 }
+
+/* ================= FEATURED ================= */
+
 .featured-artist {
   margin: 4rem 0;
   padding: 2rem;
@@ -305,19 +243,9 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
 }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.6rem; margin-bottom: 1rem; }
-h3 { font-size: 1.2rem; }
 
-.section-title {
-  margin-bottom: 2rem;
-  font-weight: 600;
-}
-.content {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* ================= EMPTY STATE ================= */
+
 .empty-state {
   text-align: center;
   margin-top: 6rem;
@@ -327,21 +255,46 @@ h3 { font-size: 1.2rem; }
   color: var(--color-muted);
   margin: 1rem 0 2rem 0;
 }
-.album-detail {
+
+/* ================= FOOTER ================= */
+
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 2rem;
   background-color: var(--color-surface);
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-strong);
-  max-width: 1000px;
-  margin: 3rem auto;
+  border-top: 1px solid var(--color-surface-2);
 }
-.album-cover img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.album-info h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+
+.footer-links {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+/* ================= AVATAR ================= */
+
+.avatar {
+  background-color: var(--color-primary);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }

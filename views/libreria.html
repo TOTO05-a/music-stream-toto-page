@@ -2,27 +2,90 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Pagina de musica">
+    <meta name="description" content="Librería personal - MusicStream">
     <meta name="author" content="Antonio Cruz">
-    <meta name="keywords" content="musica, streaming, albumes, playlists, podcast">
+    <meta name="keywords" content="musica, libreria, albumes guardados">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Libreria</title>
+    <title>Libreria | MusicStream</title>
 
-    <link rel="icon" href="iconos/apple-touch-icon.png">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/layout.css">
+
+    <!-- FAVICON (corregido ../) -->
+    <link rel="icon" href="../iconos/apple-touch-icon.png">
 </head>
+
 <body>
-    <main class="content">
-  <section class="empty-state">
-    <h2>Mi Librería</h2>
-    <p>Aún no tienes álbumes en tu colección.</p>
-    <a href="" class="btn btn-primary">
-      Explorar Tienda
-    </a>
-  </section>
-</main>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">MusicStream</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Descubrir</a></li>
+                <li><a href="libreria.html" class="active">Libreria</a></li>
+                <li><a href="album_detail.html">Tienda</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-left">
+                <h1 class="logo-text">MusicStream</h1>
+            </div>
+
+            <div class="header-center">
+                <input type="text" placeholder="Artists, albums, tracks">
+            </div>
+
+            <div class="header-right">
+                <div class="avatar">AC</div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <section class="empty-state">
+                <h2>Mi Librería</h2>
+                <p>Aún no tienes álbumes en tu colección.</p>
+
+                <a href="album_detail.html" class="btn btn-primary">
+                    Explorar Tienda
+                </a>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MusicStream</h3>
+                    <p>Premium digital music platform for modern listeners.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+
+                <p class="footer-copy">
+                    © 2026 Acme Records. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
 
 </body>
 </html>

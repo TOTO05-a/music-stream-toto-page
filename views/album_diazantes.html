@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="description" content="DiazAntes - Alvaro Diaz">
+<meta name="author" content="Antonio Cruz">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiazAntes | MusicStream</title>
 
-  <link rel="icon" href="../iconos/favicon.ico">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/layout.css">
-
-  <title>Nombre del Álbum</title>
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="icon" href="../iconos/apple-touch-icon.png">
 </head>
-<body>
 
-<header>
-  <nav>
-    <h1>MusicStream</h1>
-    <ul>
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="card.html">Tienda</a></li>
-      <li><a href="libreria.html">Librería</a></li>
-    </ul>
-  </nav>
+<body>
+<div class="app-layout">
+
+<aside class="sidebar">
+<h2 class="logo">MusicStream</h2>
+<nav>
+<ul>
+<li><a href="../index.html">Descubrir</a></li>
+<li><a href="libreria.html">Libreria</a></li>
+<li><a href="#" class="active">Tienda</a></li>
+</ul>
+</nav>
+</aside>
+
+<div class="main-area">
+
+<header class="header">
+<h1 class="logo-text">MusicStream</h1>
 </header>
 
 <main class="content">
-  <section class="album-detail">
-    <img src="../imagenes/imagen.jpg" alt="">
-    <div>
-      <h2>Nombre del Álbum</h2>
-      <p>Género · 2026</p>
-      <br>
-      <a href="checkout.html" class="btn">Comprar ahora</a>
-    </div>
-  </section>
+<section class="album-detail">
+
+<div class="album-cover">
+<img src="../imagenes/DiazAntes.png">
+</div>
+
+<div class="album-info">
+<h2>DiazAntes</h2>
+<p class="artist">Alvaro Diaz</p>
+
+<p class="description">
+Una colección de tracks previos que marcaron el inicio del sonido Diaz.
+</p>
+
+<ul class="tracklist">
+<li>1. Track Uno</li>
+<li>2. Track Dos</li>
+<li>3. Track Tres</li>
+</ul>
+
+<p class="price">$10.99</p>
+
+<a href="checkout.html" class="btn btn-primary">
+Add to Cart
+</a>
+
+</div>
+
+</section>
 </main>
 
+</div>
+</div>
 </body>
 </html>

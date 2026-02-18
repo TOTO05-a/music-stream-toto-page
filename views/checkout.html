@@ -2,13 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Checkout - MusicStream">
+    <meta name="author" content="Antonio Cruz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Checkout | MusicStream</title>
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/layout.css">
+    <link rel="icon" href="../iconos/apple-touch-icon.png">
 </head>
-
 <body>
 
 <div class="app-layout">
@@ -18,8 +20,8 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Descubrir</a></li>
-                <li><a href="#">Libreria</a></li>
-                <li><a href="#" class="active">Tienda</a></li>
+                <li><a href="libreria.html">Libreria</a></li>
+                <li><a href="album_detail.html" class="active">Tienda</a></li>
             </ul>
         </nav>
     </aside>
@@ -27,65 +29,28 @@
     <div class="main-area">
 
         <header class="header">
-            <div class="header-left">
-                <h1 class="logo-text">MusicStream</h1>
-            </div>
-            <div class="header-center">
-                <input type="text" placeholder="Artists, albums, tracks">
-            </div>
-            <div class="header-right">
-                <div class="avatar">AC</div>
-            </div>
+            <h1 class="logo-text">MusicStream</h1>
         </header>
 
-        <main class="content">
+        <main class="content checkout">
 
-            <section class="checkout">
+            <h2>Checkout</h2>
 
-                <h2>Order Summary</h2>
+            <div class="order-item">
+                <p><strong>Sayonara - Alvaro Diaz</strong></p>
+                <p>$12.99</p>
+            </div>
 
-                <div class="order-item">
-                    <p><strong>Album:</strong> Midnight Echo</p>
-                    <p><strong>Artist:</strong> Nova Echo</p>
-                    <p><strong>Price:</strong> $12.99</p>
-                </div>
-
-                <h3>INFORMACION DE PAGO</h3>
-
-                <form class="checkout-form" action="success.html">
-
-                    <label>
-                        NOMBRE COMPLETO
-                        <input type="text" required>
-                    </label>
-
-                    <label>
-                        NUMERO DE TARJETA
-                        <input type="text" required>
-                    </label>
-
-                    <label>
-                        VENCIMIENTO DE DATOS
-                        <input type="month" required>
-                    </label>
-
-                    <label>
-                        CVV
-                        <input type="text" required>
-                    </label>
-
-                    <button type="submit" class="btn btn-primary">
-                        Complete Purchase
-                    </button>
-
-                </form>
-
-            </section>
+            <form class="checkout-form" action="success.html">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="text" placeholder="Número de tarjeta" required>
+                <button class="btn btn-primary">Confirmar Compra</button>
+            </form>
 
         </main>
 
     </div>
-
 </div>
 
 </body>

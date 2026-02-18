@@ -1,11 +1,3 @@
-.header {
-  background-color: var(--color-surface);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
 
 .header-center input {
   width: 100%;
@@ -54,24 +46,13 @@
   display: grid;
   gap: 1.5rem;
 }
-.album-grid {
-  display: grid;
-  gap: 1.5rem;
-}
+
 
 @media (min-width: 768px) {
   .album-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
-.album-card {
-  background-color: var(--color-surface);
-  padding: 1rem;
-  border-radius: var(--radius-md);
-  transition: var(--transition);
-}
-
 .album-card img {
   width: 100%;
   border-radius: var(--radius-sm);
@@ -205,14 +186,6 @@
   font-weight: bold;
 }
 
-.sidebar a {
-  text-decoration: none;
-  color: var(--color-muted);
-  display: block;
-  padding: 0.5rem 0;
-  
-}
-
 .sidebar a.active {
   color: var(--color-primary);
   font-weight: bold;
@@ -268,4 +241,9 @@
 .app-layout {
   display: grid;
   grid-template-columns: 220px 1fr;
+}
+.album-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }

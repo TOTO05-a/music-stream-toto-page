@@ -2,31 +2,41 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Detalle del álbum - MusicStream">
+    <meta name="author" content="Antonio Cruz">
+    <meta name="keywords" content="musica, album, tienda, compra digital">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album Detail</title>
 
-<!-- rutas -->
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/layout.css">
-<link rel="icon" href="../iconos/apple-touch-icon.png">
+    <title>Album Detail | MusicStream</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+
+    <!-- FAVICON (NO SE TOCA) -->
+    <link rel="icon" href="../iconos/apple-touch-icon.png">
 </head>
+
 <body>
-    
+
 <div class="app-layout">
 
+    <!-- SIDEBAR -->
     <aside class="sidebar">
         <h2 class="logo">MusicStream</h2>
         <nav>
             <ul>
                 <li><a href="../index.html">Descubrir</a></li>
-                <li><a href="#">Libreria</a></li>
-                <li><a href="#" class="active">Tienda</a></li>
+                <li><a href="libreria.html">Libreria</a></li>
+                <li><a href="album_detail.html" class="active">Tienda</a></li>
             </ul>
         </nav>
     </aside>
 
+    <!-- MAIN AREA -->
     <div class="main-area">
 
+        <!-- HEADER -->
         <header class="header">
             <div class="header-left">
                 <h1 class="logo-text">MusicStream</h1>
@@ -41,33 +51,36 @@
             </div>
         </header>
 
+        <!-- CONTENT -->
         <main class="content">
 
             <section class="album-detail">
 
                 <div class="album-cover">
-                    <img src="../assets/images/album1.jpg" alt="Album cover">
+                    <!-- Usa la misma carpeta que index -->
+                    <img src="../imagenes/AlbumAlvaroSayonara.png" alt="Sayonara Album Cover">
                 </div>
 
                 <div class="album-info">
-                    <h2>Midnight Echo</h2>
-                    <p class="artist">Nova Echo</p>
+                    <h2>Sayonara</h2>
+                    <p class="artist">Alvaro Diaz</p>
+
                     <p class="description">
-                        Midnight Echo blends atmospheric synth layers with deep rhythmic bass,
-                        creating an immersive sonic experience.
+                        Sayonara es un viaje sonoro que mezcla sonidos urbanos,
+                        synth modernos y una narrativa emocional profunda.
                     </p>
 
                     <h3>Tracklist</h3>
                     <ul class="tracklist">
-                        <li>1. Into the Night</li>
-                        <li>2. Lunar Waves</li>
-                        <li>3. Neon Pulse</li>
-                        <li>4. Echo Chamber</li>
+                        <li>1. Intro</li>
+                        <li>2. 1000Canciones</li>
+                        <li>3. Problemón</li>
+                        <li>4. GatitasSandungueras</li>
                     </ul>
 
                     <p class="price">$12.99</p>
 
-                    <a href="checkout.html" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary">
                         Add to Cart
                     </a>
 
@@ -77,8 +90,28 @@
 
         </main>
 
-    </div>
+        <!-- FOOTER (igual que index para coherencia) -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MusicStream</h3>
+                    <p>Premium digital music platform for modern listeners.</p>
+                </div>
 
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+
+                <p class="footer-copy">
+                    © 2026 Acme Records. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+    </div>
 </div>
 
 </body>
